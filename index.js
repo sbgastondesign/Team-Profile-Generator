@@ -134,5 +134,4 @@ function dreamTeam() {
     addManager();
 }
 
-
 startApp()
