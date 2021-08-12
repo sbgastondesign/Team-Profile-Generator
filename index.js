@@ -38,14 +38,13 @@ function addManager() {
         message: "Enter Manager's office number",
       },
     ]).then(answers => {
-      const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+      const Manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       team.push(manager);
       idArray.push(answers.managerId);
       makeTeam();
     });
-
-  function makeTeam()
-
+  }
+  function makeTeam() {
   inquirer.prompt([
     {
       type: "list",
@@ -134,5 +133,6 @@ function dreamTeam() {
 
     addManager();
 }
+
 
 startApp()
